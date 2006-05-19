@@ -9,7 +9,7 @@ Group:		Development/Languages
 Source0:	http://dl.sourceforge.net/jruby/%{name}-src-%{version}.tar.gz
 # Source0-md5:	4a3e300cc0dda0f52677db8be0076e62
 URL:		http://jruby.sourceforge.net/
-BuildRequires:	jakarta-ant
+BuildRequires:	ant
 BuildRequires:	jdk >= 1.4
 Requires:	jre >= 1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
