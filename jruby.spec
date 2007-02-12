@@ -1,6 +1,6 @@
 # TODO: make jruby.sh work with our paths
 Summary:	JRuby - A Java implementation of the Ruby language
-Summary(pl):	JRuby - implementacja jêzyka Ruby w Javie
+Summary(pl.UTF-8):   JRuby - implementacja jÄ™zyka Ruby w Javie
 Name:		jruby
 Version:	0.8.1
 Release:	0.1
@@ -22,12 +22,12 @@ The Java version is be tightly integrated with Java to allow both to
 script any Java class and to embed the interpreter into any Java
 application.
 
-%description -l pl
-JRuby to próba odtworzenia interpretera jêzyka Ruby
+%description -l pl.UTF-8
+JRuby to prÃ³ba odtworzenia interpretera jÄ™zyka Ruby
 (http://www.ruby-lang.org/) w Javie.
 
-Wersja w Javie jest ¶ci¶le zintegrowana z Jav± aby umo¿liwiæ zarówno
-u¿ywanie dowolnej klasy Javy w skrypcie, jak i osadzaæ interpreter w
+Wersja w Javie jest Å›ciÅ›le zintegrowana z JavÄ… aby umoÅ¼liwiÄ‡ zarÃ³wno
+uÅ¼ywanie dowolnej klasy Javy w skrypcie, jak i osadzaÄ‡ interpreter w
 dowolnej aplikacji w Javie.
 
 %prep
