@@ -1,6 +1,6 @@
 # TODO: make jruby.sh work with our paths
 Summary:	JRuby - A Java implementation of the Ruby language
-Summary(pl.UTF-8):   JRuby - implementacja języka Ruby w Javie
+Summary(pl.UTF-8):	JRuby - implementacja języka Ruby w Javie
 Name:		jruby
 Version:	0.8.1
 Release:	0.1
