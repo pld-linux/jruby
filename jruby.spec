@@ -1,13 +1,15 @@
-# TODO: make jruby.sh work with our paths
+# TODO:
+# - make jruby.sh work with our paths
+# - package all scripts
 Summary:	JRuby - A Java implementation of the Ruby language
 Summary(pl.UTF-8):	JRuby - implementacja języka Ruby w Javie
 Name:		jruby
-Version:	0.8.1
+Version:	0.9.0
 Release:	0.1
 License:	CPL or GPL or LGPL
 Group:		Development/Languages
 Source0:	http://dl.sourceforge.net/jruby/%{name}-src-%{version}.tar.gz
-# Source0-md5:	4a3e300cc0dda0f52677db8be0076e62
+# Source0-md5:	0e5a764dc16b018624e7a57939d64d7e
 URL:		http://jruby.sourceforge.net/
 BuildRequires:	ant
 BuildRequires:	jdk >= 1.4
@@ -34,14 +36,15 @@ dowolnej aplikacji w Javie.
 %setup -q
 
 %build
-ant
+%ant
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_javadir},%{_bindir}}
 
-install bin/jruby.sh $RPM_BUILD_ROOT%{_bindir}
-install lib/jruby.jar $RPM_BUILD_ROOT%{_javadir}
+install bin/jruby $RPM_BUILD_ROOT%{_bindir}/jruby
+install lib/jruby.jar $RPM_BUILD_ROOT%{_javadir}/jruby-%{version}.jar
+ln -s jruby-%{version}.jar $RPM_BUILD_ROOT%{_javadir}/jruby.jar
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,5 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING COPYING.CPL README docs
-%attr(755,root,root) %{_bindir}/jruby.sh
-%{_javadir}/*.jar
+%attr(755,root,root) %{_bindir}/jruby
+%{_javadir}/jruby-%{version}.jar
+%{_javadir}/jruby.jar
